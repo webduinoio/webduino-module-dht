@@ -71,9 +71,9 @@ Blockly.Blocks['dht_trigger'] = {
         .appendField("定時啟動")
         .appendField(new Blockly.FieldDropdown([["on", "true"], ["off", "false"]]), "state")
         .appendField("每隔")
-        .appendField(new Blockly.FieldDropdown([["1", "1"], ["3", "3"], ["5", "5"], ["10", "10"], ["30", "30"], ["60", "60"], ["180", "180"]]), "delaySec")
+        .appendField(new Blockly.FieldDropdown([["2", "2"], ["3", "3"], ["5", "5"], ["10", "10"], ["30", "30"], ["60", "60"], ["180", "180"]]), "delaySec")
         .appendField("秒，共執行")
-        .appendField(new Blockly.FieldDropdown([["1", "1"], ["3", "3"], ["5", "5"], ["10", "10"], ["30", "30"], ["60", "60"], ["無限", "-1"]]), "repeatTime")
+        .appendField(new Blockly.FieldDropdown([["無限", "-1"]]), "repeatTime")
         .appendField("次");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);

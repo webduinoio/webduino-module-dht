@@ -49,7 +49,7 @@ Blockly.Blocks['dht_get_number'] = {
   init: function () {
     this.appendDummyInput()
       .appendField(new Blockly.FieldVariable("dht"), "name_")
-      .appendField(Blockly.Msg.WEBDUINO_DHT_GET_NOW, "測得目前的")
+      .appendField(Blockly.Msg.WEBDUINO_DHT_GET_NOW)
       .appendField(new Blockly.FieldDropdown([
         [Blockly.Msg.WEBDUINO_DHT_GET_T, "temperature"],
         [Blockly.Msg.WEBDUINO_DHT_GET_H, "humidity"]
@@ -66,15 +66,16 @@ Blockly.Blocks['dht_get_number'] = {
 Blockly.Blocks['dht_trigger'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("設定")
+        .appendField(Blockly.Msg.WEBDUINO_DHT_SET)
         .appendField(new Blockly.FieldVariable("dht"), "dht")
-        .appendField("定時啟動")
+        .appendField(Blockly.Msg.WEBDUINO_DHT_TIMER)
         .appendField(new Blockly.FieldDropdown([["on", "true"], ["off", "false"]]), "state")
-        .appendField("每隔")
+        .appendField(Blockly.Msg.WEBDUINO_DHT_INTERVAL)
         .appendField(new Blockly.FieldDropdown([["2", "2"], ["3", "3"], ["5", "5"], ["10", "10"], ["30", "30"], ["60", "60"], ["180", "180"]]), "delaySec")
-        .appendField("秒，共執行")
-        .appendField(new Blockly.FieldDropdown([["無限", "-1"]]), "repeatTime")
-        .appendField("次");
+        .appendField(Blockly.Msg.WEBDUINO_DHT_SECOND)
+        .appendField(Blockly.Msg.WEBDUINO_DHT_RUN)
+        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.WEBDUINO_DHT_INFINITY, "-1"]]), "repeatTime")
+        .appendField(Blockly.Msg.WEBDUINO_DHT_TIMES);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(65);

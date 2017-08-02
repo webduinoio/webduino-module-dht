@@ -14,7 +14,7 @@
       </block>
     </value>
   </block>
-  <block type="dht_read"></block>
   <block type="dht_get_number"></block>
   <block type="dht_trigger"></block>
+  <block type="dht_read"></block>
 </category>

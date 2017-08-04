@@ -1,3 +1,6 @@
+var mainUrl = 'https://tutorials.webduino.io/zh-tw/docs/';
+var utmUrl = '?utm_source=cloud-blockly&utm_medium=contextMenu&utm_campaign=tutorials';
+
 Blockly.Blocks['dht_new'] = {
   init: function () {
     this.appendDummyInput()
@@ -6,7 +9,7 @@ Blockly.Blocks['dht_new'] = {
     this.setOutput(true);
     this.setTooltip('');
     this.setColour(230);
-    this.setHelpUrl('https://webduino.io');
+    this.setHelpUrl(mainUrl + 'basic/sensor/dht.html' + utmUrl); 
   }
 };
 
@@ -25,7 +28,7 @@ Blockly.Blocks['dht_get'] = {
     this.setNextStatement(true);
     this.setTooltip('');
     this.setColour(65);
-    this.setHelpUrl('https://webduino.io');
+    this.setHelpUrl(mainUrl + 'basic/sensor/dht.html' + utmUrl); 
   }
 };
 
@@ -42,7 +45,7 @@ Blockly.Blocks['dht_read'] = {
     this.setNextStatement(true);
     this.setTooltip('');
     this.setColour(65);
-    this.setHelpUrl('https://webduino.io');
+    this.setHelpUrl(mainUrl + 'basic/sensor/dht.html' + utmUrl); 
   }
 };
 
@@ -58,7 +61,8 @@ Blockly.Blocks['dht_get_number'] = {
     this.setOutput(true);
     this.setTooltip('');
     this.setColour(35);
-    this.setHelpUrl('https://webduino.io');
+    this.setToolUrl('https://webduino.io');
+    this.setHelpUrl(mainUrl + 'basic/sensor/dht.html' + utmUrl); 
   }
 };
 
@@ -79,6 +83,6 @@ Blockly.Blocks['dht_trigger'] = {
     this.setNextStatement(true, null);
     this.setColour(65);
     this.setTooltip('');
-    this.setHelpUrl('http://webduino.io/');
+    this.setHelpUrl(mainUrl + 'basic/sensor/dht.html' + utmUrl); 
   }
 };

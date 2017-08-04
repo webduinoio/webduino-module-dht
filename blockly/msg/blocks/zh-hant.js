@@ -13,4 +13,5 @@ Blockly.Msg.WEBDUINO_DHT_RUN = "秒，執行";
 Blockly.Msg.WEBDUINO_DHT_INFINITY = "無限";
 Blockly.Msg.WEBDUINO_DHT_TIMES = "次";
 Blockly.Msg.WEBDUINO_DHT_FIRMWARE = "硬體設定";
-Blockly.Msg.WEBDUINO_DHT_DETECT = "偵測溫濕度"
+Blockly.Msg.WEBDUINO_DHT_DETECT = "偵測溫濕度";
+Blockly.Msg.WEBDUINO_DHT_FIRMWARE_COMMENT = "此積木會將動作寫入開發板，瀏覽器關閉後仍會持續運行";

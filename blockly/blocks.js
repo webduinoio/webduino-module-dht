@@ -29,10 +29,9 @@ Blockly.Blocks['dht_get'] = {
   }
 };
 
-
 Blockly.Blocks['dht_read'] = {
   init: function () {
-    this.setCommentText('此積木會將動作寫入開發板，瀏覽器關閉後仍會持續運行');
+    this.setCommentText(Blockly.Msg.WEBDUINO_DHT_FIRMWARE_COMMENT);
     this.appendDummyInput()
       .appendField(Blockly.Msg.WEBDUINO_DHT_FIRMWARE,"硬體設定")
       .appendField(new Blockly.FieldVariable("dht"), "var_")
@@ -63,11 +62,9 @@ Blockly.Blocks['dht_get_number'] = {
   }
 };
 
-
-
 Blockly.Blocks['dht_trigger'] = {
   init: function() {
-    this.setCommentText('此積木會將動作寫入開發板，瀏覽器關閉後仍會持續運行');
+    this.setCommentText(Blockly.Msg.WEBDUINO_DHT_FIRMWARE_COMMENT);
     this.appendDummyInput()
         .appendField(Blockly.Msg.WEBDUINO_DHT_FIRMWARE,"硬體設定")
         .appendField(new Blockly.FieldVariable("dht"), "dht")

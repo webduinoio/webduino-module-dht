@@ -1,3 +1,6 @@
+var mainUrl = 'https://tutorials.webduino.io/zh-tw/docs/';
+var utmUrl = '?utm_source=cloud-blockly&utm_medium=contextMenu&utm_campaign=tutorials';
+
 Blockly.Blocks['dht_new'] = {
   init: function () {
     this.appendDummyInput()
@@ -6,7 +9,7 @@ Blockly.Blocks['dht_new'] = {
     this.setOutput(true);
     this.setTooltip('');
     this.setColour(230);
-    this.setHelpUrl('https://webduino.io');
+    this.setHelpUrl(mainUrl + 'basic/sensor/dht.html' + utmUrl); 
   }
 };
 
@@ -25,23 +28,24 @@ Blockly.Blocks['dht_get'] = {
     this.setNextStatement(true);
     this.setTooltip('');
     this.setColour(65);
-    this.setHelpUrl('https://webduino.io');
+    this.setHelpUrl(mainUrl + 'basic/sensor/dht.html' + utmUrl); 
   }
 };
 
-
 Blockly.Blocks['dht_read'] = {
   init: function () {
+    this.setCommentText(Blockly.Msg.WEBDUINO_DHT_FIRMWARE_COMMENT);
     this.appendDummyInput()
+      .appendField(Blockly.Msg.WEBDUINO_DHT_FIRMWARE,"硬體設定")
       .appendField(new Blockly.FieldVariable("dht"), "var_")
-      .appendField(Blockly.Msg.WEBDUINO_DHT_GET, "get temperature and humidity over every ");
+      .appendField(Blockly.Msg.WEBDUINO_DHT_DETECT, "偵測溫濕度");
     this.appendStatementInput("do")
       .appendField(Blockly.Msg.WEBDUINO_DHT_GET_DO, "do");
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip('');
     this.setColour(65);
-    this.setHelpUrl('https://webduino.io');
+    this.setHelpUrl(mainUrl + 'basic/sensor/dht.html' + utmUrl); 
   }
 };
 
@@ -49,7 +53,7 @@ Blockly.Blocks['dht_get_number'] = {
   init: function () {
     this.appendDummyInput()
       .appendField(new Blockly.FieldVariable("dht"), "name_")
-      .appendField(Blockly.Msg.WEBDUINO_DHT_GET_NOW, "測得目前的")
+      .appendField(Blockly.Msg.WEBDUINO_DHT_GET_NOW)
       .appendField(new Blockly.FieldDropdown([
         [Blockly.Msg.WEBDUINO_DHT_GET_T, "temperature"],
         [Blockly.Msg.WEBDUINO_DHT_GET_H, "humidity"]
@@ -57,28 +61,28 @@ Blockly.Blocks['dht_get_number'] = {
     this.setOutput(true);
     this.setTooltip('');
     this.setColour(35);
-    this.setHelpUrl('https://webduino.io');
+    this.setToolUrl('https://webduino.io');
+    this.setHelpUrl(mainUrl + 'basic/sensor/dht.html' + utmUrl); 
   }
 };
 
-
-
 Blockly.Blocks['dht_trigger'] = {
   init: function() {
+    this.setCommentText(Blockly.Msg.WEBDUINO_DHT_FIRMWARE_COMMENT);
     this.appendDummyInput()
-        .appendField("設定")
+        .appendField(Blockly.Msg.WEBDUINO_DHT_FIRMWARE,"硬體設定")
         .appendField(new Blockly.FieldVariable("dht"), "dht")
-        .appendField("定時啟動")
+        .appendField(Blockly.Msg.WEBDUINO_DHT_TIMER)
         .appendField(new Blockly.FieldDropdown([["on", "true"], ["off", "false"]]), "state")
-        .appendField("每隔")
-        .appendField(new Blockly.FieldDropdown([["1", "1"], ["3", "3"], ["5", "5"], ["10", "10"], ["30", "30"], ["60", "60"], ["180", "180"]]), "delaySec")
-        .appendField("秒，共執行")
-        .appendField(new Blockly.FieldDropdown([["1", "1"], ["3", "3"], ["5", "5"], ["10", "10"], ["30", "30"], ["60", "60"], ["無限", "-1"]]), "repeatTime")
-        .appendField("次");
+        .appendField(Blockly.Msg.WEBDUINO_DHT_INTERVAL)
+        .appendField(new Blockly.FieldDropdown([["2", "2"], ["3", "3"], ["5", "5"], ["10", "10"], ["30", "30"], ["60", "60"], ["180", "180"]]), "delaySec")
+        .appendField(Blockly.Msg.WEBDUINO_DHT_RUN)
+        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.WEBDUINO_DHT_INFINITY, "-1"]]), "repeatTime")
+        .appendField(Blockly.Msg.WEBDUINO_DHT_TIMES);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(65);
     this.setTooltip('');
-    this.setHelpUrl('http://webduino.io/');
+    this.setHelpUrl(mainUrl + 'basic/sensor/dht.html' + utmUrl); 
   }
 };

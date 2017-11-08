@@ -1,4 +1,4 @@
-# webduino-module-DHT
+# webduino-module-dht
 
 Webduino Module for DHT.
 
@@ -11,5 +11,3 @@ bower install https://github.com/webduinoio/webduino-module-dht.git
 ## License
 
 This project is licensed under the MIT license, see [LICENSE](LICENSE) for more information.
-# webduino-module-dht
-# webduino-module-dht

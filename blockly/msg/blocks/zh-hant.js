@@ -15,3 +15,4 @@ Blockly.Msg.WEBDUINO_DHT_TIMES = "次";
 Blockly.Msg.WEBDUINO_DHT_FIRMWARE = "硬體設定";
 Blockly.Msg.WEBDUINO_DHT_DETECT = "偵測溫濕度";
 Blockly.Msg.WEBDUINO_DHT_FIRMWARE_COMMENT = "此積木會將動作寫入開發板，瀏覽器關閉後仍會持續運行";
+Blockly.Msg.WEBDUINO_DHT_HELPURL = "https://resource.webduino.io/docs/cloud-component/sensor/dht";

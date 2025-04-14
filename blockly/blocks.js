@@ -9,7 +9,7 @@ Blockly.Blocks['dht_new'] = {
     this.setOutput(true);
     this.setTooltip('');
     this.setColour(230);
-    this.setHelpUrl(mainUrl + 'basic/sensor/dht.html' + utmUrl); 
+    this.setHelpUrl(Blockly.Msg.WEBDUINO_DHT_HELPURL);
   }
 };
 
@@ -28,7 +28,7 @@ Blockly.Blocks['dht_get'] = {
     this.setNextStatement(true);
     this.setTooltip('');
     this.setColour(65);
-    this.setHelpUrl(mainUrl + 'basic/sensor/dht.html' + utmUrl); 
+    this.setHelpUrl(Blockly.Msg.WEBDUINO_DHT_HELPURL);
   }
 };
 
@@ -45,7 +45,7 @@ Blockly.Blocks['dht_read'] = {
     this.setNextStatement(true);
     this.setTooltip('');
     this.setColour(65);
-    this.setHelpUrl(mainUrl + 'basic/sensor/dht.html' + utmUrl); 
+    this.setHelpUrl(Blockly.Msg.WEBDUINO_DHT_HELPURL);
   }
 };
 
@@ -62,7 +62,7 @@ Blockly.Blocks['dht_get_number'] = {
     this.setTooltip('');
     this.setColour(35);
     this.setToolUrl('https://webduino.io');
-    this.setHelpUrl(mainUrl + 'basic/sensor/dht.html' + utmUrl); 
+    this.setHelpUrl(Blockly.Msg.WEBDUINO_DHT_HELPURL);
   }
 };
 
@@ -83,6 +83,6 @@ Blockly.Blocks['dht_trigger'] = {
     this.setNextStatement(true, null);
     this.setColour(65);
     this.setTooltip('');
-    this.setHelpUrl(mainUrl + 'basic/sensor/dht.html' + utmUrl); 
+    this.setHelpUrl(Blockly.Msg.WEBDUINO_DHT_HELPURL);
   }
 };
